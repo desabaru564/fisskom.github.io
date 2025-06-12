@@ -16,13 +16,28 @@
   <main>
     <h1>Metode Simpson 1/3</h1>
     <p>
-      Metode Simpson 1/3 digunakan untuk menghitung integral numerik dengan menggunakan parabola untuk menghampiri fungsi.
+      Metode Simpson 1/3 merupakan salah satu pendekatan numerik yang digunakan untuk menghitung integral tentu dari suatu fungsi kontinu. Berbeda dengan metode Trapesium yang menggunakan garis lurus untuk menghampiri kurva, metode Simpson 1/3 menggunakan kurva kuadratik (parabola) untuk mendekati bentuk fungsi dalam tiap subinterval. Akibatnya, metode ini biasanya memberikan tingkat akurasi yang lebih tinggi untuk fungsi yang halus.
+    </p>
+    <p>
+      Jika interval [a, b] dibagi menjadi <em>n</em> subinterval dengan panjang sama <em>h = (b - a)/n</em> dan <em>n</em> adalah bilangan genap, maka rumus Simpson 1/3 diberikan oleh:
     </p>
     <pre><code>
-∫ₐᵇ f(x) dx ≈ (h/3) * [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + f(xₙ)]
+∫ₐᵇ f(x) dx ≈ (h / 3) × [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + 4f(xₙ₋₁) + f(xₙ)]
     </code></pre>
     <p>
-      Metode ini membutuhkan jumlah interval genap.
+      Di mana:
+      <ul>
+        <li><strong>n</strong>: jumlah subinterval, harus genap</li>
+        <li><strong>h</strong>: panjang setiap subinterval, h = (b - a)/n</li>
+        <li><strong>x₀, x₁, ..., xₙ</strong>: titik-titik partisi dari interval [a, b]</li>
+        <li>Koefisien 4 dikalikan dengan nilai fungsi pada titik-titik ganjil, dan 2 untuk titik genap (kecuali ujung-ujung)</li>
+      </ul>
+    </p>
+    <p>
+      Metode Simpson 1/3 cocok digunakan untuk fungsi yang halus dan kontinu pada interval yang dipertimbangkan. Dalam konteks fisika komputasi, metode ini digunakan untuk menghitung integral dari bentuk kompleks, seperti menghitung medan magnet secara numerik berdasarkan hukum Biot-Savart.
+    </p>
+    <p>
+      Salah satu keunggulan metode Simpson 1/3 adalah akurasinya yang tinggi untuk jumlah titik yang relatif sedikit, selama fungsi yang dihampiri tidak terlalu berosilasi tajam.
     </p>
   </main>
 </body>
