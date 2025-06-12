@@ -16,18 +16,34 @@
   <main>
     <h1>Metode Trapesium</h1>
     <p>
-      Metode Trapesium adalah teknik numerik sederhana untuk menghitung integral. 
-      Luas di bawah kurva dihampiri dengan trapesium. Rumusnya adalah:
+      Metode Trapesium adalah salah satu teknik numerik dasar yang digunakan untuk menghitung aproksimasi nilai dari suatu integral tentu. Metode ini bekerja dengan membagi kurva fungsi menjadi segmen-segmen kecil, lalu menghampiri masing-masing segmen tersebut dengan bentuk trapesium, bukan kurva asli.
+    </p>
+    <p>
+      Untuk integral sederhana pada interval <code>[a, b]</code>, metode trapesium dirumuskan sebagai:
     </p>
     <pre><code>
 ∫ₐᵇ f(x) dx ≈ (b - a) / 2 * [f(a) + f(b)]
     </code></pre>
     <p>
-      Untuk partisi lebih dari satu:
+      Persamaan di atas merepresentasikan aproksimasi luas di bawah kurva fungsi <code>f(x)</code> pada satu segmen interval menggunakan satu trapesium. Untuk akurasi yang lebih tinggi, interval dapat dibagi menjadi <code>n</code> subinterval yang lebih kecil dengan panjang yang sama <code>h = (b - a) / n</code>.
+    </p>
+    <p>
+      Maka, rumus metode trapesium majemuk menjadi:
     </p>
     <pre><code>
 ∫ₐᵇ f(x) dx ≈ h/2 * [f(x₀) + 2∑f(xᵢ) + f(xₙ)]
     </code></pre>
+    <p>
+      Di mana:
+      <ul>
+        <li><code>x₀ = a</code> dan <code>xₙ = b</code></li>
+        <li><code>xᵢ</code> adalah titik-titik di antara <code>a</code> dan <code>b</code>, dengan <code>i = 1, 2, ..., n - 1</code></li>
+        <li><code>∑f(xᵢ)</code> adalah jumlah nilai fungsi pada titik-titik tengah tersebut</li>
+      </ul>
+    </p>
+    <p>
+      Metode ini cukup akurat untuk fungsi-fungsi yang kontinu dan mulus. Namun, untuk fungsi yang sangat berubah-ubah atau memiliki turunan tinggi, metode ini mungkin menghasilkan galat yang signifikan dan perlu dipadukan dengan metode lain seperti Simpson 1/3 atau 3/8 untuk akurasi lebih baik.
+    </p>
   </main>
 </body>
 </html>
