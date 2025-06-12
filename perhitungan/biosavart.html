@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Biot-Savart Interaktif</title>
+  <link rel="stylesheet" href="vv.css">
+</head>
+<body>
+  <nav class="navbar">
+    <button onclick="location.href='../index.html'">Beranda</button>
+    <button onclick="location.href='../penjelasan/hukum-biot-savart.html'">Hukum Biot-Savart</button>
+    <button onclick="location.href='../penjelasan/trapesium.html'">Metode Trapesium</button>
+    <button onclick="location.href='../penjelasan/simpson13.html'">Simpson 1/3</button>
+    <button onclick="location.href='../penjelasan/simpson38.html'">Simpson 3/8</button>
+  </nav>
+
+  <div class="container">
+    <h2>Perhitungan Medan Magnet - Biot-Savart</h2>
+
+    <form id="form-medan" onsubmit="hitungMedanMagnet(event)">
+      <label>a (batas bawah kawat): <input type="number" step="any" id="a" required></label>
+      <label>b (batas atas kawat): <input type="number" step="any" id="b" required></label>
+      <label>n (jumlah segmen): <input type="number" id="n" required></label>
+      <label>x<sub>p</sub>: <input type="number" step="any" id="xp" required></label>
+      <label>y<sub>p</sub>: <input type="number" step="any" id="yp" required></label>
+      <label>I (Arus, A): <input type="number" step="any" id="I" required></label>
+      <button type="submit">Hitung</button>
+    </form>
+
+    <h3>Hasil Medan Magnet</h3>
+    <table>
+      <tr><th>Metode</th><th>Hasil B (Tesla)</th></tr>
+      <tr><td>Trapesium</td><td id="hasilTrapesium">-</td></tr>
+      <tr><td>Simpson 1/3</td><td id="hasilSimpson13">-</td></tr>
+      <tr><td>Simpson 3/8</td><td id="hasilSimpson38">-</td></tr>
+    </table>
+
+    <h3>Selisih Antar Metode</h3>
+    <table>
+      <tr><th>Perbandingan</th><th>Selisih</th></tr>
+      <tr><td>Trapesium vs Simpson 1/3</td><td id="selisih1">-</td></tr>
+      <tr><td>Trapesium vs Simpson 3/8</td><td id="selisih2">-</td></tr>
+      <tr><td>Simpson 1/3 vs Simpson 3/8</td><td id="selisih3">-</td></tr>
+    </table>
+  </div>
+
+  <script src="8.js"></script>
+</body>
+</html>
