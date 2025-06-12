@@ -16,14 +16,32 @@
   <main>
     <h1>Metode Simpson 3/8</h1>
     <p>
-      Metode Simpson 3/8 adalah variasi dari metode Simpson untuk menghitung integral numerik. 
-      Rumusnya menggunakan tiga subinterval dan berbasis pendekatan kubik:
+      Metode Simpson 3/8 adalah teknik integrasi numerik yang merupakan perluasan dari pendekatan Simpson 1/3. Berbeda dengan Simpson 1/3 yang menggunakan dua titik (tiga nilai fungsi) dalam satu interval pendekatan kuadratik, metode Simpson 3/8 menggunakan tiga subinterval (empat titik) untuk menghasilkan pendekatan polinomial kubik (orde tiga) terhadap fungsi yang diintegralkan.
+    </p>
+    <p>
+      Rumus umum metode Simpson 3/8 pada interval <code>[a, b]</code> yang dibagi menjadi <code>n</code> subinterval (dengan <strong>n kelipatan 3</strong>) dan panjang langkah <code>h = (b - a)/n</code> adalah:
     </p>
     <pre><code>
-∫ₐᵇ f(x) dx ≈ (3h/8) * [f(x₀) + 3f(x₁) + 3f(x₂) + 2f(x₃) + ... + f(xₙ)]
+∫ₐᵇ f(x) dx ≈ (3h / 8) × [f(x₀) + 
+  3f(x₁) + 3f(x₂) + 2f(x₃) +
+  3f(x₄) + 3f(x₅) + 2f(x₆) +
+  ... +
+  f(xₙ)]
     </code></pre>
     <p>
-      Cocok digunakan jika jumlah segmen kelipatan tiga.
+      Penjelasan variabel:
+      <ul>
+        <li><code>n</code> harus habis dibagi 3 (misal: 3, 6, 9, ...)</li>
+        <li><code>h</code>: lebar setiap subinterval = (b - a) / n</li>
+        <li><code>x₀ = a</code>, <code>xₙ = b</code>, dan <code>xᵢ</code> adalah titik-titik di antaranya</li>
+        <li>Koefisien 3 digunakan pada titik-titik dalam satu grup tiga (kecuali kelipatan 3), sedangkan koefisien 2 digunakan untuk setiap titik ketiga yang bukan titik awal maupun akhir.</li>
+      </ul>
+    </p>
+    <p>
+      Metode Simpson 3/8 sangat berguna ketika jumlah segmen integrasi adalah kelipatan tiga, dan dapat memberikan hasil yang lebih akurat dibandingkan metode Simpson 1/3 dalam kondisi tertentu, terutama untuk fungsi yang mengalami perubahan bentuk secara halus namun tidak simetris.
+    </p>
+    <p>
+      Dalam konteks aplikasi fisika, seperti menghitung medan magnet dengan hukum Biot-Savart, metode Simpson 3/8 memungkinkan estimasi integral linier yang lebih presisi ketika digunakan untuk menghitung kontribusi medan dari segmen kawat yang kompleks.
     </p>
   </main>
 </body>
