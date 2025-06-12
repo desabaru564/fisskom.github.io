@@ -16,19 +16,31 @@
   <main>
     <h1>Hukum Biot-Savart</h1>
     <p>
-      Hukum Biot-Savart menjelaskan bagaimana medan magnet dihasilkan oleh arus listrik dalam suatu elemen kawat. 
-      Secara matematis, hukum ini dinyatakan sebagai:
+      Hukum Biot-Savart merupakan salah satu hukum fundamental dalam elektromagnetisme yang menggambarkan kontribusi elemen arus terhadap medan magnet di suatu titik di ruang. Hukum ini dikembangkan oleh Jean-Baptiste Biot dan Félix Savart pada awal abad ke-19 melalui eksperimen terhadap kawat berarus dan jarum magnet.
+    </p>
+    <p>
+      Secara matematis, hukum Biot-Savart dinyatakan dalam bentuk diferensial sebagai berikut:
     </p>
     <pre><code>d𝐁 = (μ₀ / 4π) * (I * d𝐥 × r̂) / r²</code></pre>
     <p>
-      Di mana:
+      dengan pengertian simbol-simbol sebagai berikut:
       <ul>
-        <li><strong>μ₀</strong>: permeabilitas vakum</li>
-        <li><strong>I</strong>: arus listrik</li>
-        <li><strong>d𝐥</strong>: elemen panjang kawat</li>
-        <li><strong>r̂</strong>: vektor satuan dari elemen ke titik pengamatan</li>
-        <li><strong>r</strong>: jarak dari elemen ke titik pengamatan</li>
+        <li><strong>μ₀</strong>: permeabilitas vakum (μ₀ ≈ 4π × 10⁻⁷ H/m), konstanta yang menyatakan seberapa besar medan magnet terbentuk di ruang vakum.</li>
+        <li><strong>I</strong>: kuat arus listrik yang mengalir melalui konduktor (dalam ampere).</li>
+        <li><strong>d𝐥</strong>: elemen vektor sepanjang kawat penghantar yang mengandung arah arus.</li>
+        <li><strong>r̂</strong>: vektor satuan yang mengarah dari elemen kawat menuju titik pengamatan.</li>
+        <li><strong>r</strong>: jarak antara elemen kawat dan titik pengamatan medan magnet.</li>
       </ul>
+    </p>
+    <p>
+      Produk silang <code>d𝐥 × r̂</code> menunjukkan bahwa medan magnet yang dihasilkan tegak lurus terhadap bidang yang dibentuk oleh arah arus dan posisi titik pengamatan, sesuai dengan aturan tangan kanan.
+    </p>
+    <p>
+      Untuk menghitung total medan magnet di suatu titik akibat keseluruhan distribusi arus, integral dari persamaan di atas digunakan:
+    </p>
+    <pre><code>𝐁 = (μ₀ / 4π) ∫ (I * d𝐥 × r̂) / r²</code></pre>
+    <p>
+      Hukum Biot-Savart sangat penting dalam perhitungan medan magnet yang dihasilkan oleh konfigurasi arus kompleks, seperti loop melingkar, solenoida, atau penghantar berbentuk sembarang, terutama dalam kasus-kasus statis atau kuasistatis sebelum hukum Ampère-Maxwell diterapkan secara lebih umum dalam kerangka persamaan Maxwell.
     </p>
   </main>
 </body>
